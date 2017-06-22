@@ -8,6 +8,7 @@ var i;
 var dinheiro = 0;
 limitemat = limitemat + 60;
 limiteprodu = limiteprodu + 10;
+var batata;
 
 /* PRODUZIR MATERIAL */
 function produzirmat(){
@@ -17,12 +18,15 @@ function produzirmat(){
 
 function finishmat(){
   if(scrap == limitemat){
-    alert("limite do estoque atingido");
+    
   }else {
     scrap = scrap + 10;
     document.getElementById('Mattxt1').innerHTML = scrap;
   }
   desbloqueia();
+}
+function bat(){
+  alert("batata");
 }
 
 function desbloqueia(){
@@ -83,7 +87,7 @@ function produzirprodu(){
 
 function finishprodu(){
   if(produto == limiteprodu){
-    alert("limite do estoque atingido");
+    document.getElementById('frase1').visibility = 'visible';
   }else {
     if(scrap-20 < 0){
       alert("Material insuficiente");
