@@ -1,0 +1,66 @@
+body{
+  background-color: gray;
+}
+.inv{
+  display: none;
+}
+#nav{
+  visibility: hidden;
+}
+#nav a{
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+#nav a:hover{
+  color: 	#595959;
+}
+#bgmaterial{
+  width: 100%;
+  display:inherit;
+}
+#myProgress {
+    width: 50%;
+}
+#myBar {
+    width: 0%;
+    height: 10px;
+    background-color: green;
+}
+#myProgress1 {
+    width: 50%;
+}
+#myBar1 {
+    width: 0%;
+    height: 10px;
+    background-color: green;
+}
+#myProgress2 {
+    width: 50%;
+}
+#myBar2 {
+    width: 0%;
+    height: 10px;
+    background-color: green;
+}
+#Mattxt3{
+  visibility: hidden;
+}
+#btgastar{
+  visibility: hidden;
+}
+#trab{
+  visibility: hidden;
+}
+#trab1{
+  visibility: hidden;
+}
+#automa{
+  visibility: hidden;
+}
+#Info{
+  position: absolute;
+  top: 80%;
+  left: 15%;
+  font-size: 25px;
+}

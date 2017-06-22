@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="data/style.css">
+  <script language="javascript" type="text/javascript" src="data/j1.js"></script>
+  <script language="javascript" type="text/javascript" src="data/j2.js"></script>
+</head>
+<body>
+<!-- MENU  -->
+<div id="nav">
+  <div>
+    <a id="menu1" onclick="mostra('bgmaterial')">Materiais</a>
+    <a id="menu2" onclick="mostra('bgproduto')">Produto</a>
+    <a id="menu3" onclick="mostra('bgvenda')">Venda</a>
+    <a id="menu4" >Banco</a>
+    <p id="Info"></p>
+  </div>
+  </div>
+<!-- MATERIAL -->
+<div id="bgmaterial" class="inv">
+  <div id="myProgress">
+    <div id="myBar"></div>
+  </div>
+  <p id="Mattxt">Material</p>
+  <p id="Mattxt1"></p>
+  <p id="Mattxt2"></p>
+  <!--p id="Mattxt3">contrate trabalhadores</p-->
+  <p id="trab">trabalhadores</p>
+  <p id="trab1"></p>
+<button id="btmaterial" onclick="produzirmat()">Material</button>
+<button id="btgastar" onclick="gastar()">trabalhador - 30 scrap</button>
+<button id="automa" onclick="automatizar()">automatizar</button>
+</div>
+<!-- PRODUTO -->
+<div id="bgproduto" class="inv">
+  <div id="myProgress1">
+    <div id="myBar1"></div>
+  </div>
+  <p id="produtxt">Produto</p>
+  <p id="produtxt1"></p>
+  <p id="produtxt2"></p>
+
+<button id="btproduto" onclick="produzirprodu()">Produto</button>
+<!--button id="automa1" onclick="automatizar()">automatizar</button-->
+</div>
+<!-- VENDA -->
+<div id="bgvenda" class="inv">
+  <div id="myProgress2">
+    <div id="myBar2"></div>
+  </div>
+  <p id="vendatxt">Dinheiro</p>
+  <p id="vendatxt1"></p>
+  <button id="btvenda" onclick="venda()">Vender</button>
+</div>
+
+<!-- INFORMAÇÕES -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
