@@ -15,10 +15,20 @@
 <div id="nav">
   <div>
     <a id="menu1" onclick="mostra('bgmaterial')">Materiais</a>
+    <a></a>
     <a id="menu2" onclick="mostra('bgproduto')">Produto</a>
+    <a></a>
     <a id="menu3" onclick="mostra('bgvenda')">Venda</a>
-    <a id="menu4" >Banco</a>
-    <p id="Info"></p>
+    <a></a>
+    <a id="menu4" onclick="mostra('bgmercado')">Mercado</a>
+    <a></a>
+    <a id="menu5" onclick="mostra('bgtrabalhadores')">Trabalhadores</a>
+    <a></a>
+    <a id="menu6" onclick="mostra('bgdiario')" href="javascript:changecolor()">Diário</a>
+    <img id="img1" src="data/worker.png"></img>
+    <a id="menu7"></a>
+    <img id="img2" src="data/neutral.png"></img>
+    <a id="menu8"></a>
   </div>
   </div>
 <!-- MATERIAL -->
@@ -29,12 +39,14 @@
   <p id="Mattxt">Material</p>
   <p id="Mattxt1"></p>
   <p id="Mattxt2"></p>
-  <!--p id="Mattxt3">contrate trabalhadores</p-->
-  <p id="trab">trabalhadores</p>
+  <p id="Mattxt3"></p>
+  <p id="trab"></p>
   <p id="trab1"></p>
 <button id="btmaterial" onclick="produzirmat()">Material</button>
-<button id="btgastar" onclick="gastar()">trabalhador - 30 scrap</button>
-<button id="automa" onclick="automatizar()">automatizar</button>
+<button id="bttrabmatmais" onclick="trabalhadoresMatmais()">Trabalhadores +</button>
+<button id="bttrabmatmenos" onclick="trabalhadoresMatmenos()">Trabalhadores -</button>
+<button id="btautoma" onclick="automatizarmat()">Automatizar</button>
+<button id="btmanual" onclick="manual()">Cessar produção</button>
 </div>
 <!-- PRODUTO -->
 <div id="bgproduto" class="inv">
@@ -43,10 +55,14 @@
   </div>
   <p id="produtxt">Produto</p>
   <p id="produtxt1"></p>
-  <p id="produtxt2"></p>
-
+  <p id="produtxt2">Trabalhadores</p>
+  <p id="produtxt3"></p>
+  <p id="produtxt4"></p>
 <button id="btproduto" onclick="produzirprodu()">Produto</button>
-<!--button id="automa1" onclick="automatizar()">automatizar</button-->
+<button id="bttrabprodumais" onclick="trabalhadoresPromais()">Trabalhadores +</button>
+<button id="bttrabprodumenos" onclick="trabalhadoresPromenos()">Trabalhadores -</button>
+<button id="btautoma1" onclick="automatizarprodu()">Automatizar</button>
+<button id="btmanual1" onclick="manual1()">Cessar produção</button>
 </div>
 <!-- VENDA -->
 <div id="bgvenda" class="inv">
@@ -55,19 +71,90 @@
   </div>
   <p id="vendatxt">Dinheiro</p>
   <p id="vendatxt1"></p>
+  <p id="vendatxt2">Trabalhadores</p>
+  <p id="vendatxt3"></p>
   <button id="btvenda" onclick="venda()">Vender</button>
+  <button id="bttrabvendamais" onclick="trabalhadoresVendamais()">Trabalhadores +</button>
+  <button id="bttrabvendamenos" onclick="trabalhadoresVendamenos()">Trabalhadores -</button>
+  <button id="btautoma2" onclick="automatizarvenda()">Automatizar</button>
+  <button id="btmanual2" onclick="manual2()">Cessar produção</button>
 </div>
 
-<!-- FRASES -->
+<!-- DIÁRIO -->
+<div id="bgdiario" class="inv">
+  <div id="invd">
+  <p id="d1">Depois de tanto trabalho, finalmente o fruto.</p>
+  <p id="d4">Preciso juntar dinheiro para conseguir comprar um estoque melhor.</p>
+  <p id="d2">Agora consigo comprar ferramentas para melhorar meus processos.<p>
+  <p id="d3">Se eu conseguir juntar 14 de dinheiro, consigo contratar um trabalhador por algum tempo.<p>
+  <p id="d5">Infelizmente só cabem 3 pessoas aqui, tenho que alugar ou comprar um lugar melhor.</p>
+  </div>
+  <div id="buttonsdiario">
+    <button id="btlugares" onclick="mostrarlugares()">Lugares para alugar/comprar</button>
+  </div>
+  <div id="lugares">
+    <div id="barato">
+      <p id="nome1">Lugar barato</p>
+      <img id="lug1" src="data/box.png" class="imgs"></img>
+      <p id="maxestoque1"></p>
+      <img id="lug12" src="data/wrench.png" class="imgs"></img>
+      <p id="maxferramentas1"></p>
+      <img id="lug13" src="data/worker.png" class="imgs"></img>
+      <p id="maxtrabalhadores1"></p>
+      <button id="btalugarbarato" onclick="alugarbarato()">Alugar</button>
+      <button id="btcomprarbarato" onclick="comprarbarato()">Comprar</button>
+    </div>
+    <div id="medio">
+      <p id="nome2">Lugar custo-beneficio</p>
+      <img id="lug21" src="data/box.png" class="imgs"></img>
+      <p id="maxestoque2"></p>
+      <img id="lug22" src="data/wrench.png" class="imgs"></img>
+      <p id="maxferramentas2"></p>
+      <img id="lug23" src="data/worker.png" class="imgs"></img>
+      <p id="maxtrabalhadores2"></p>
+      <button id="btalugarmedio" onclick="alugarmedio()">Alugar</button>
+      <button id="btcomprarmedio" onclick="comprarmedio()">Comprar</button>
+    </div>
+    <div id="caro">
+      <p id="nome3">Lugar caro</p>
+      <img id="lug31" src="data/box.png" class="imgs"></img>
+      <p id="maxestoque3"></p>
+      <img id="lug32" src="data/wrench.png" class="imgs"></img>
+      <p id="maxferramentas3"></p>
+      <img id="lug33" src="data/worker.png" class="imgs"></img>
+      <p id="maxtrabalhadores3"></p>
+      <button id="btalugarcaro"onclick="alugarcaro()" >Alugar</button>
+      <button id="btcomprarcaro" onclick="comprarcaro()">Comprar</button>
+    </div>
+  </div>
+</div>
 
-<p id="frase1">Estoque cheio</p>
-<p id="frase2">Produto insuficiente</p>
-<p id="frase3">Dinhero insuficiente</p>
-
-
-
-
-
+<!-- MERCADO -->
+<div id="bgmercado" class="inv">
+  <div id="ferramentas">
+    <button id="btferramentas" onclick="comprarferramentas()">Ferramentas para material</button>
+    <p>Nivel das ferramentas</p>
+    <p id="nivelferramentas"></p>
+    <button id="btestoque" onclick="estoque()">Aumentar estoque</button>
+    <p>Nivel do estoque</p>
+    <p id="nivelestoque"></p>
+  </div>
+</div>
+<!-- TRABALHADORES -->
+<div id="bgtrabalhadores" class="inv">
+  <p id="trabtot">Trabalhadores</p>
+  <p id="trabtot1"></p>
+  <button id="btgastar" onclick="gastar()">Contratar trabalhadores</button>
+  <button id="btdemitir" onclick="demitir()">Demitir trabalhador</button>
+  <p id="trabtot2">Salário</p>
+  <p id="trabtot3"></p>
+  <button id="btsalariomais" onclick="subirsalario()">Aumentar o salário</button>
+  <button id="btsalariomenos" onclick="diminuirsalario()">Diminuir salário</button>
+  <p id="trabtot4"></p>
+  <p id="trabtot5">Salário atrasado</p>
+  <p id="trabtot6"></p>
+  <button id="btsalarioatrasado" onclick="pagarsalarioatrasado()">Pagar salário atrasado</button>
+</div>
 
 
 

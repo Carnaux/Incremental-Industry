@@ -5,6 +5,8 @@ body{
   display: none;
 }
 #nav{
+  position: absolute;
+  left: 25%;
   visibility: hidden;
 }
 #nav a{
@@ -14,11 +16,47 @@ body{
 }
 #nav a:hover{
   color: 	#595959;
+  cursor: default;
 }
+/* BACKGROUNDS*/
 #bgmaterial{
-  width: 100%;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 90%;
   display:inherit;
 }
+#bgproduto{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 90%;
+}
+#bgvenda{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 90%;
+}
+#bgdiario{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 90%;
+}
+#bgmercado{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 90%;
+}
+#bgtrabalhadores{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 90%;
+}
+/*   BARRAS */
 #myProgress {
     width: 50%;
 }
@@ -43,20 +81,79 @@ body{
     height: 10px;
     background-color: green;
 }
+/* TEXTOS */
 #Mattxt3{
+  position: absolute;
+  top: 42%;
+  left: 2%;
   visibility: hidden;
 }
-#btgastar{
-  visibility: hidden;
-}
+
 #trab{
   visibility: hidden;
 }
 #trab1{
   visibility: hidden;
 }
-#automa{
+#produtxt2{
   visibility: hidden;
+}
+#produtxt4{
+  position: absolute;
+  top: 42%;
+  left: 2%;
+  visibility: hidden;
+}
+#vendatxt2{
+  visibility: hidden;
+}
+#vendatxt3{
+  visibility: hidden;
+}
+/*  BOTOES */
+#btgastar{
+  visibility: hidden;
+}
+#btautoma{
+  visibility: hidden;
+}
+#btmanual{
+  visibility: hidden;
+}
+#bttrabmatmenos{
+  visibility: hidden;
+}
+#bttrabmatmais{
+  visibility: hidden;
+}
+#btautoma1{
+  visibility: hidden;
+}
+#btmanual1{
+  visibility: hidden;
+}
+#bttrabprodumenos{
+  visibility: hidden;
+}
+#bttrabprodumais{
+  visibility: hidden;
+}
+#btautoma2{
+  visibility: hidden;
+}
+#btmanual2{
+  visibility: hidden;
+}
+#bttrabvendamenos{
+  visibility: hidden;
+}
+#bttrabvendamais{
+  visibility: hidden;
+}
+#btlugares{
+  position: absolute;
+  top: -15%;
+  left: 70%;
 }
 #Info{
   position: absolute;
@@ -64,24 +161,54 @@ body{
   left: 15%;
   font-size: 25px;
 }
-#frase1{
-  opacity: 0;
-  font-size: 25px;
-  position: absolute;
-  top: 80%;
-  left: 15%;
+#invd{
+  visibility: hidden;
 }
-#frase2{
-  opacity: 0;
-  font-size: 25px;
-  position: absolute;
-  top: 80%;
-  left: 15%;
+#img1{
+  width: 2%;
+  height: 2%;
 }
-#frase3{
-  opacity: 0;
-  font-size: 25px;
+#img2{
+  width: 2%;
+  height: 2%;
+}
+
+#lugares{
   position: absolute;
-  top: 80%;
-  left: 15%;
+  top: 0.3%;
+  left: 65%;
+  visibility: hidden;
+  border-color: black;
+  border-style: solid;
+}
+/*#lugares div img {
+  width: 1.5%;
+  height: 1.5%;
+}*/
+#barato{
+  border-color: black;
+  border-style: dotted;
+}
+.imgs{
+  width: 5%;
+  height: 5%;
+}
+#medio{
+  border-color: black;
+  border-style: dotted;
+}
+#caro{
+  border-color: black;
+  border-style: dotted;
+}
+/* caixas  */
+#lug1{
+  position: absolute;
+  top: 5%;
+  left: 2%;
+}
+#maxestoque1{
+  position: absolute;
+  top: 1%;
+  left: 4%;
 }
